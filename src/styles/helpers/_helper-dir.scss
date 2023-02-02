@@ -1,4 +1,9 @@
 @import "animations";
-@import "constants";
+@import "variables";
 @import "functions";
 @import "mixins";
+
+.text-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
