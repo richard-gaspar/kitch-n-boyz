@@ -1,7 +1,7 @@
 @import "../helpers/variables";
 @import "../helpers/animations";
 
-.hero-pagination-section {
+.hero-carousel-section {
   @include default-section;
   justify-content: space-between;
   padding: 15rem 10rem;
@@ -10,7 +10,7 @@
 
   &::before {
     content: "";
-    background-image: url("/assets/images/hero-pagination/img-res.jpg");
+    background-image: url("/assets/images/hero-carousel/img-res.jpg");
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -22,13 +22,16 @@
     animation: change 30s infinite ease-in-out;
   }
 
-  .quote {
+  .quotes {
     z-index: $z-index-1;
     font-size: 3rem;
     font-weight: 700;
     padding: 0 5rem;
     text-align: center;
-    animation: moveInRight 1s ease-out;
+
+    .quote {
+      animation: moveInRight 1s ease-out;
+    }
 
     .quote-author {
       margin-top: 1rem;

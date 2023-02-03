@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hero-pagination',
-  templateUrl: './hero-pagination.component.html',
-  styleUrls: ['./hero-pagination.component.scss'],
+  selector: 'app-hero-carousel',
+  templateUrl: './hero-carousel.component.html',
+  styleUrls: ['./hero-carousel.component.scss'],
 })
-export class HeroPaginationComponent {
-  quotes = {
-    quote: '"People who love to eat are always the best people."',
-    author: 'Julia Child',
-    id: 1,
-  };
+export class HerocarouselComponent {
+  activeQuote = 1;
 
-  array = [
+  quotesArray = [
     {
       quote: '"People who love to eat are always the best people."',
       author: 'Julia Child',
@@ -38,18 +34,14 @@ export class HeroPaginationComponent {
   ];
 
   onForward() {
-    if (this.quotes.id === this.array.length) {
-      this.quotes = this.array[0];
-    } else {
-      this.quotes = this.array[this.quotes.id];
-    }
+    if (this.activeQuote === this.quotesArray.length) {
+      this.activeQuote = 1;
+    } else this.activeQuote++;
   }
 
   onBackward() {
-    if (this.quotes.id === 1) {
-      this.quotes = this.array[this.array.length - 1];
-    } else {
-      this.quotes = this.array[this.quotes.id - 2];
-    }
+    if (this.activeQuote === 1) {
+      this.activeQuote = this.quotesArray.length;
+    } else this.activeQuote--;
   }
 }

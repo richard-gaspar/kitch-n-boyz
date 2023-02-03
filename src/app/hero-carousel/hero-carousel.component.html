@@ -1,0 +1,22 @@
+<section class="hero-carousel-section">
+  <button class="hero-carousel-button" (click)="onBackward()">&larr;</button>
+  <blockquote class="quotes">
+    <div *ngIf="activeQuote === 1" class="quote">
+      <p>{{ quotesArray[0].quote }}</p>
+      <p class="quote-author">{{ quotesArray[0].author }}</p>
+    </div>
+    <div *ngIf="activeQuote === 2" class="quote">
+      <p>{{ quotesArray[1].quote }}</p>
+      <p class="quote-author">{{ quotesArray[1].author }}</p>
+    </div>
+    <div *ngIf="activeQuote === 3" class="quote">
+      <p>{{ quotesArray[2].quote }}</p>
+      <p class="quote-author">{{ quotesArray[2].author }}</p>
+    </div>
+    <div *ngIf="activeQuote === 4" class="quote">
+      <p>{{ quotesArray[3].quote }}</p>
+      <p class="quote-author">{{ quotesArray[3].author }}</p>
+    </div>
+  </blockquote>
+  <button class="hero-carousel-button" (click)="onForward()">&rarr;</button>
+</section>
