@@ -1,0 +1,50 @@
+@keyframes change {
+  0% {
+    background-image: url(/assets/images/hero-pagination/img-res.jpg);
+    background-position: center;
+  }
+  25% {
+    background-image: url(/assets/images/hero-pagination/img2-res.jpg);
+    background-position: center;
+  }
+  50% {
+    background-image: url(/assets/images/hero-pagination/img3-res.jpg);
+    background-position: center;
+  }
+  75% {
+    background-image: url(/assets/images/hero-pagination/img4-res.jpg);
+    background-position: center;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

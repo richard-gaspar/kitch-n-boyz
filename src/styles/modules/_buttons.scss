@@ -1,0 +1,11 @@
+@import "../helpers/variables";
+
+.hero-pagination-button {
+  background-color: transparent;
+  border: none;
+  font-size: 4rem;
+  font-weight: 700;
+  color: $color-primary;
+  cursor: pointer;
+  z-index: $z-index-1;
+}
