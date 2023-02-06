@@ -1,0 +1,50 @@
+.history-section {
+  display: flex;
+
+  &-left {
+    max-width: 50%;
+    padding: 10rem;
+    text-align: center;
+
+    & p {
+      padding: 2rem;
+    }
+  }
+
+  &-right {
+    width: 50%;
+
+    .composition {
+      position: relative;
+      &-photo {
+        margin-top: 10rem;
+        position: absolute;
+        max-width: 40%;
+        box-shadow: 0 1.5rem 4rem rgba($color-blackish, 0.4);
+        transition: all 0.3s;
+        border-radius: 2px;
+
+        &.photo-1 {
+          right: 25rem;
+          top: 0rem;
+        }
+        &.photo-2 {
+          right: 40rem;
+          top: 10rem;
+        }
+        &.photo-3 {
+          right: 20rem;
+          top: 13rem;
+        }
+        &:hover {
+          transform: scale(1.2) translateY(-0.5rem);
+          box-shadow: 0 2.5rem 4rem rgba($color-blackish, 0.5);
+          z-index: 10;
+        }
+      }
+      &:hover img:not(:hover) {
+        filter: blur(0.2rem);
+      }
+    }
+  }
+}
