@@ -1,0 +1,38 @@
+.card-wrapper {
+  perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  width: 30rem;
+
+  .card-side {
+    height: 50rem;
+    width: 100%;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 2px;
+
+    &-front {
+      background-color: $color-blackish-light;
+      color: $color-primary;
+    }
+
+    &-back {
+      background: linear-gradient($color-primary, $color-primary-dark);
+      color: $color-blackish-light;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover .card-side-front {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+
+  &:hover .card-side-back {
+    cursor: pointer;
+    transform: rotateY(0);
+  }
+}

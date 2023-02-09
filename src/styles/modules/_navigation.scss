@@ -3,10 +3,9 @@
 
   & ul {
     @include default-section;
+    @include golden-border;
     justify-content: center;
     gap: 5rem;
-    border-top: 0.2rem solid $color-primary;
-    border-bottom: 0.2rem solid $color-primary;
 
     & > * {
       background-image: linear-gradient(

@@ -1,0 +1,15 @@
+.events-section {
+  margin: 15rem 0;
+  text-align: center;
+  & h2 {
+    @include golden-border;
+    text-transform: uppercase;
+  }
+
+  .events-wrapper {
+    @include default-section;
+    justify-content: center;
+    margin-top: 10rem;
+    gap: 10rem;
+  }
+}
