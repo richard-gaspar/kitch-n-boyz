@@ -1,8 +1,8 @@
 .history-section {
   text-align: center;
 
-  .composition-photo {
-    max-width: 40%;
+  &-photo {
+    max-width: 50%;
   }
 
   & h2 {
@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    padding: 20rem;
   }
 
   .history-with-image-box {
@@ -28,12 +29,15 @@
       line-height: 3rem;
       color: $color-primary-light;
       text-align: left;
+      opacity: 0;
     }
   }
 
   .history-video-container {
     width: 100vw;
     margin-top: 20rem;
+    margin-left: -20rem;
+
     .history-video {
       object-fit: contain;
       overflow-clip-margin: content-box;
@@ -42,8 +46,16 @@
       width: 100%;
     }
   }
-}
 
-// .fade {
-//   animation: fadeUp 1s ease-in-out;
-// }
+  img {
+    opacity: 0;
+  }
+
+  .in-view {
+    animation: fadeUpImg 1.6s ease-in forwards;
+  }
+
+  .in-view2 {
+    animation: fadeUpText 1.6s ease-in forwards;
+  }
+}

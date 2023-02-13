@@ -1,19 +1,53 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.scss'],
 })
-export class HistoryComponent {
-  photoFadeUp: boolean = false;
+export class HistoryComponent implements AfterViewInit {
+  @ViewChildren('img') images!: QueryList<ElementRef>;
+  @ViewChildren('text') texts!: QueryList<ElementRef>;
 
-  // input = document.querySelector('#photo-2') as HTMLInputElement | null;
+  private observer!: IntersectionObserver;
 
-  @HostListener('document:scroll')
-  onScroll() {
-    if (document.documentElement.scrollTop > 1200) {
-      this.photoFadeUp = true;
-    }
+  ngAfterViewInit() {
+    this.images.forEach((img) => {
+      this.observeElement(img.nativeElement);
+    });
+
+    this.texts.forEach((text) => {
+      this.observeElement(text.nativeElement);
+    });
+  }
+
+  private observeElement(el: any) {
+    // Observe each image individually and animate its opacity when it comes into view
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    };
+
+    this.observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.nodeName === 'IMG') {
+            entry.target.classList.add('in-view');
+          } else {
+            entry.target.classList.add('in-view2');
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    this.observer.observe(el);
   }
 }
