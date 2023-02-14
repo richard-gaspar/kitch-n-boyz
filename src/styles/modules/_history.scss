@@ -44,6 +44,7 @@
       overflow: clip;
       height: auto;
       width: 100%;
+      opacity: 0;
     }
   }
 
@@ -51,11 +52,11 @@
     opacity: 0;
   }
 
-  .in-view {
+  .in-view-from-bottom {
     animation: fadeUpImg 1.6s ease-in forwards;
   }
 
-  .in-view2 {
+  .in-view-from-top {
     animation: fadeUpText 1.6s ease-in forwards;
   }
 }

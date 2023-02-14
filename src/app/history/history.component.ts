@@ -14,6 +14,7 @@ import {
 export class HistoryComponent implements AfterViewInit {
   @ViewChildren('img') images!: QueryList<ElementRef>;
   @ViewChildren('text') texts!: QueryList<ElementRef>;
+  @ViewChildren('video') videos!: QueryList<ElementRef>;
 
   private observer!: IntersectionObserver;
 
@@ -24,6 +25,10 @@ export class HistoryComponent implements AfterViewInit {
 
     this.texts.forEach((text) => {
       this.observeElement(text.nativeElement);
+    });
+
+    this.videos.forEach((video) => {
+      this.observeElement(video.nativeElement);
     });
   }
 
@@ -38,10 +43,10 @@ export class HistoryComponent implements AfterViewInit {
     this.observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (entry.target.nodeName === 'IMG') {
-            entry.target.classList.add('in-view');
+          if (entry.target.nodeName === 'P') {
+            entry.target.classList.add('in-view-from-top');
           } else {
-            entry.target.classList.add('in-view2');
+            entry.target.classList.add('in-view-from-bottom');
           }
           observer.unobserve(entry.target);
         }
