@@ -8,6 +8,7 @@ import { HerocarouselComponent } from './hero-carousel/hero-carousel.component';
 import { HistoryComponent } from './history/history.component';
 import { EventsSectionComponent } from './events-section/events-section.component';
 import { CardComponent } from './card/card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CardComponent } from './card/card.component';
     HistoryComponent,
     EventsSectionComponent,
     CardComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
