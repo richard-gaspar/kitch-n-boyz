@@ -1,38 +1,63 @@
-.card-wrapper {
-  perspective: 150rem;
-  position: relative;
-  height: 50rem;
-  width: 30rem;
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  flex-wrap: wrap;
 
-  .card-side {
+  .card-wrapper {
+    perspective: 150rem;
+    position: relative;
     height: 50rem;
-    width: 100%;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    border-radius: 2px;
+    width: 30rem;
 
-    &-front {
-      background-color: $color-blackish-light;
-      color: $color-primary;
+    .card-side {
+      height: 50rem;
+      width: 100%;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      border-radius: 2px;
+
+      &-front {
+        background-color: $color-blackish-light;
+        color: $color-primary;
+
+        & h3 {
+          margin-top: 5rem;
+        }
+
+        & p {
+          margin-top: 10rem;
+          padding: 0 2rem;
+        }
+      }
+
+      &-back {
+        background: linear-gradient($color-primary, $color-primary-dark);
+        color: $color-blackish-light;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        & span {
+          font-size: 4rem;
+          font-weight: 700;
+        }
+      }
     }
 
-    &-back {
-      background: linear-gradient($color-primary, $color-primary-dark);
-      color: $color-blackish-light;
-      transform: rotateY(180deg);
+    &:hover .card-side-front {
+      cursor: pointer;
+      transform: rotateY(-180deg);
     }
-  }
 
-  &:hover .card-side-front {
-    cursor: pointer;
-    transform: rotateY(180deg);
-  }
-
-  &:hover .card-side-back {
-    cursor: pointer;
-    transform: rotateY(0);
+    &:hover .card-side-back {
+      cursor: pointer;
+      transform: rotateY(0);
+    }
   }
 }

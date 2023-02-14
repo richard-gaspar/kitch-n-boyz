@@ -1,7 +1,17 @@
-<div class="card-wrapper">
-  <h1>A</h1>
-  <div class="card-side card-side-front">
-    <h3>6 course degustive menu</h3>
+<div class="cards-wrapper">
+  <div class="card-wrapper" *ngFor="let event of events">
+    <div class="card-side card-side-front">
+      <h3>{{ event.title }}</h3>
+      <p>{{ event.text }}</p>
+    </div>
+    <div class="card-side card-side-back">
+      <div>
+        <span>
+          {{ event.price }}
+        </span>
+        <p>/ Per person /</p>
+      </div>
+      <button class="btn">Book now</button>
+    </div>
   </div>
-  <div class="card-side card-side-back">Back</div>
 </div>
