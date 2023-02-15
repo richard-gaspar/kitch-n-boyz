@@ -11,6 +11,7 @@ import { CardComponent } from './home/events-section/card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     FooterComponent,
     HomeComponent,
     GalleryComponent,
+    MenuComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
