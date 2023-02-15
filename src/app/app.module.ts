@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HerocarouselComponent } from './hero-carousel/hero-carousel.component';
-import { HistoryComponent } from './history/history.component';
-import { EventsSectionComponent } from './events-section/events-section.component';
-import { CardComponent } from './card/card.component';
+import { HerocarouselComponent } from './home/hero-carousel/hero-carousel.component';
+import { HistoryComponent } from './home/history/history.component';
+import { EventsSectionComponent } from './home/events-section/events-section.component';
+import { CardComponent } from './home/events-section/card/card.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     EventsSectionComponent,
     CardComponent,
     FooterComponent,
+    HomeComponent,
+    GalleryComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

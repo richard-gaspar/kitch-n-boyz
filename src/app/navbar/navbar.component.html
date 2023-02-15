@@ -1,14 +1,14 @@
 <section id="home" class="navbar-section">
   <ul class="text-centered">
-    <li>home</li>
-    <li>gallery</li>
-    <li (click)="toEvents()">events</li>
+    <li routerLink="">home</li>
+    <li routerLink="/gallery">gallery</li>
+    <li (click)="toEvents()" routerLink="">events</li>
     <h1>
       Kitch'N <br />
       Boyz
     </h1>
     <li>menu</li>
     <li>staff</li>
-    <li (click)="toContact()">contact</li>
+    <li (click)="toContact()" routerLink="">contact</li>
   </ul>
 </section>
