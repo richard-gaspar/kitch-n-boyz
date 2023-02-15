@@ -53,7 +53,7 @@
   }
 }
 
-@keyframes fadeUpImg {
+@keyframes fadeUp {
   0% {
     opacity: 0;
     transform: translate3d(0, 2rem, 0);
@@ -69,7 +69,7 @@
   }
 }
 
-@keyframes fadeUpText {
+@keyframes fadeDown {
   0% {
     opacity: 0;
     transform: translate3d(0, -5rem, 0);

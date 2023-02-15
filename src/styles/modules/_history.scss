@@ -53,10 +53,10 @@
   }
 
   .in-view-from-bottom {
-    animation: fadeUpImg 1.6s ease-in forwards;
+    animation: fadeUp 1.6s ease-in forwards;
   }
 
   .in-view-from-top {
-    animation: fadeUpText 1.6s ease-in forwards;
+    animation: fadeDown 1.6s ease-in forwards;
   }
 }
