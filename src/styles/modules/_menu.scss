@@ -16,6 +16,8 @@
   .menu-wrapper {
     width: $default-max-width;
     display: flex;
+    flex-direction: column;
+    gap: 10rem;
 
     & h2 {
       margin-bottom: 5rem;
@@ -24,10 +26,16 @@
     .menu-type {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 10rem;
+      column-gap: 5rem;
       row-gap: 3rem;
 
-      &-course {
+      &-course-name {
+        color: $color-primary-light;
+        font-size: 1.8rem;
+      }
+
+      &-course-ingredients {
+        color: $color-primary-dark;
       }
     }
   }

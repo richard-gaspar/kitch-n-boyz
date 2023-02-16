@@ -20,6 +20,7 @@
   .history-with-image-box {
     @include default-section;
     justify-content: space-between;
+    align-items: center;
     margin: 20rem auto 0 auto;
     max-width: 140rem;
     gap: 20rem;

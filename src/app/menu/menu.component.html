@@ -6,8 +6,32 @@
       <h2>Appetizers</h2>
       <div class="menu-type">
         <div class="menu-type-course" *ngFor="let course of appetizerCourses">
-          <p>{{ course.name }}</p>
-          <p>{{ course.ingredients.join(" | ") }}</p>
+          <p class="menu-type-course-name">{{ course.name }}</p>
+          <p class="menu-type-course-ingredients">
+            {{ course.ingredients.join(" | ") }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Entreés</h2>
+      <div class="menu-type">
+        <div class="menu-type-course" *ngFor="let course of entreeCourses">
+          <p class="menu-type-course-name">{{ course.name }}</p>
+          <p class="menu-type-course-ingredients">
+            {{ course.ingredients.join(" | ") }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Desserts</h2>
+      <div class="menu-type">
+        <div class="menu-type-course" *ngFor="let course of dessertCourses">
+          <p class="menu-type-course-name">{{ course.name }}</p>
+          <p class="menu-type-course-ingredients">
+            {{ course.ingredients.join(" | ") }}
+          </p>
         </div>
       </div>
     </div>
