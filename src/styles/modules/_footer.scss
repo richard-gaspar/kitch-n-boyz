@@ -1,10 +1,15 @@
+@import "../helpers/variables";
+
 .footer-section {
-  display: flex;
-  justify-content: center;
-  gap: 10rem;
-  padding: 5rem 10rem;
   border-top: 2px solid $color-primary;
 
+  .footer-wrapper {
+    @include default-section;
+    max-width: $default-max-width;
+    justify-content: space-between;
+    gap: 10rem;
+    padding: 5rem 0;
+  }
   &-div {
     display: flex;
     flex-direction: column;

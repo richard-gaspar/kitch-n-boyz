@@ -1,3 +1,15 @@
 <section class="menu-section">
-  <h1>Dine in</h1>
+  <h1>Menu</h1>
+
+  <div class="menu-wrapper">
+    <div>
+      <h2>Appetizers</h2>
+      <div class="menu-type">
+        <div class="menu-type-course" *ngFor="let course of appetizerCourses">
+          <p>{{ course.name }}</p>
+          <p>{{ course.ingredients.join(" | ") }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
