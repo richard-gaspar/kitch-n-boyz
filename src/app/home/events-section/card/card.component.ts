@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
+import { AnimationService } from 'src/services/animation.service';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
-export class CardComponent {
+export class CardComponent implements AfterViewInit {
   public events = [
     {
       title: 'Journey of Taste',
@@ -25,4 +32,14 @@ export class CardComponent {
       price: 'NOK 1750',
     },
   ];
+
+  @ViewChildren('card') cards!: QueryList<ElementRef>;
+
+  constructor(private animation: AnimationService) {}
+
+  ngAfterViewInit(): void {
+    this.cards.forEach((card) => {
+      this.animation.observeElement(card.nativeElement);
+    });
+  }
 }

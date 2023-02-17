@@ -1,5 +1,5 @@
 <div class="cards-wrapper">
-  <div class="card-wrapper" *ngFor="let event of events">
+  <div #card class="card-wrapper" *ngFor="let event of events">
     <div class="card-side card-side-front">
       <h3>{{ event.title }}</h3>
       <p>{{ event.text }}</p>

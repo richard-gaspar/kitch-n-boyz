@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AnimationService {
-  public observer!: IntersectionObserver;
+  private observer!: IntersectionObserver;
 
   constructor() {}
 
@@ -19,13 +19,15 @@ export class AnimationService {
     this.observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          console.log(entry.target.nodeName);
           if (entry.target.nodeName === 'P') {
             entry.target.classList.add('in-view-from-top');
           }
 
           if (
             entry.target.nodeName === 'IMG' ||
-            entry.target.nodeName === 'VIDEO'
+            entry.target.nodeName === 'VIDEO' ||
+            entry.target.nodeName === 'DIV'
           ) {
             entry.target.classList.add('in-view-from-bottom');
           }
