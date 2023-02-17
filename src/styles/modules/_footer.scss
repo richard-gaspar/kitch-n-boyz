@@ -14,15 +14,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &-bottom-part > div:hover {
+      cursor: pointer;
+      color: $color-primary-light;
+    }
   }
 
   & a {
     text-decoration: none;
     color: inherit;
-
-    &:hover {
-      color: $color-primary-light;
-    }
   }
 
   & h3 {
