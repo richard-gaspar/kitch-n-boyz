@@ -3,14 +3,11 @@
   <div class="history-wrapper">
     <div class="history-with-image-box">
       <p class="history-text" id="text1" #text>
-        Mikael Andersson was born and raised in Norway, surrounded by the rich
-        and varied flavors of the country's seafood and produce. From a young
-        age, Mikael showed a talent for cooking, and he pursued his passion at
-        culinary school.
+        {{ historyArray[0].text }}
       </p>
       <img
         #img
-        src="/assets/images/mikael/photo1.jpg"
+        src="{{ historyArray[0].imageUrl }}"
         alt=""
         class="history-section-photo photo-1"
         id="img1"
@@ -19,16 +16,13 @@
     <div class="history-with-image-box">
       <img
         #img
-        src="/assets/images/mikael/photo2.jpg"
+        src="{{ historyArray[1].imageUrl }}"
         alt=""
         class="history-section-photo photo-2"
         id="img2"
       />
       <p class="history-text" id="text2" #text>
-        After working in several top restaurants in Norway and Europe, Mikael
-        determined to create a restaurant that showcased the best of Norwegian
-        ingredients and flavors, while also incorporating his own contemporary
-        ideas and techniques.
+        {{ historyArray[1].text }}
       </p>
     </div>
     <div class="history-video-container">
@@ -46,14 +40,11 @@
     </div>
     <div class="history-with-image-box">
       <p class="history-text" id="text3" #text>
-        In the early 2010s, Mikael opened his restaurant in Oslo, called
-        "Kitch'N Boyz". The menu was built around the freshest seafood and
-        produce, and Mikael was committed to sourcing ingredients from local
-        fishermen and farmers.
+        {{ historyArray[2].text }}
       </p>
       <img
         #img
-        src="/assets/images/mikael/photo4.jpg"
+        src="{{ historyArray[2].imageUrl }}"
         alt=""
         class="history-section-photo photo-3"
         id="img3"
@@ -63,15 +54,13 @@
     <div class="history-with-image-box">
       <img
         #img
-        src="/assets/images/mikael/photo3.jpg"
+        src="{{ historyArray[3].imageUrl }}"
         alt=""
         class="history-section-photo photo-1"
         id="img4"
       />
       <p class="history-text" id="text4" #text>
-        Today, Kitch'N Boyz is considered one of the premier dining destinations
-        in Norway, and Mikael is widely regarded as one of the leading lights of
-        the Norwegian culinary scene.
+        {{ historyArray[3].text }}
       </p>
     </div>
   </div>
