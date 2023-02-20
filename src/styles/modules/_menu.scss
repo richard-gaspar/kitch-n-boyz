@@ -13,6 +13,13 @@
     letter-spacing: 2rem;
   }
 
+  & h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin: -2rem 0 5rem -2rem;
+  }
+
   .menu-wrapper {
     width: $default-max-width;
     display: flex;
