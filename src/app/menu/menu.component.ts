@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class MenuComponent {
   appetizerCourses = [
     {
+      name: 'Poutine',
+      ingredients: ['tomato biscuit', ' marinated tomatoes', 'pesto purée'],
+    },
+    {
       name: 'Crispy Octopus',
       ingredients: [
         'confit potatoes',
@@ -17,10 +21,6 @@ export class MenuComponent {
         'creamy salsa verde',
         'almond corn purée',
       ],
-    },
-    {
-      name: 'Poutine',
-      ingredients: ['tomato biscuit', ' marinated tomatoes', 'pesto purée'],
     },
     {
       name: 'Roasted Beets',
@@ -43,8 +43,14 @@ export class MenuComponent {
       ingredients: ['lemon aioli ', 'celery', 'chili flakes', 'green onions'],
     },
     {
-      name: 'Fettuccine',
-      ingredients: ['black beans', ' corn', 'romesco sauce'],
+      name: 'Nordic Sunburst Salad',
+      ingredients: [
+        'dried cherries',
+        'cucumber',
+        'spicy cinnamon vinaigrette',
+        'gorgonzola cheese',
+        'organic mixed greens',
+      ],
     },
     {
       name: 'Blackened Salmon',
@@ -56,21 +62,15 @@ export class MenuComponent {
       ],
     },
     {
+      name: 'Fettuccine',
+      ingredients: ['black beans', ' corn', 'romesco sauce'],
+    },
+    {
       name: 'Grilled Venison',
       ingredients: [
         'artichoke puree',
         'blackberry sauce',
         'caramellized carrot',
-      ],
-    },
-    {
-      name: 'Nordic Sunburst Salad',
-      ingredients: [
-        'dried cherries',
-        'cucumber',
-        'spicy cinnamon vinaigrette',
-        'gorgonzola cheese',
-        'organic mixed greens',
       ],
     },
   ];
