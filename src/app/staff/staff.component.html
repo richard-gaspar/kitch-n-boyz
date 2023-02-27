@@ -1,0 +1,56 @@
+<section class="staff-section">
+  <div class="employee" *ngFor="let member of staffArray">
+    <div class="employee-card">
+      <div class="employee-card-image">
+        <img src="{{ member.imageUrl }}" alt="Photo of {{ member.name }}" />
+      </div>
+      <ul class="employee-social-icons">
+        <li>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="employee-social-icons-first"
+          >
+            <ng-icon name="ionLogoFacebook" class="icon"></ng-icon>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="employee-social-icons-second"
+          >
+            <ng-icon name="ionLogoInstagram" class="icon"></ng-icon>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            class="employee-social-icons-third"
+          >
+            <ng-icon name="ionLogoTwitter" class="icon"></ng-icon>
+          </a>
+        </li>
+      </ul>
+
+      <div class="employee-details">
+        <h3>
+          {{ member.name }}
+          <br />
+          <span class="employee-details-job-title">{{ member.jobTitle }}</span>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="careers">
+    <h2>Careers</h2>
+    <p>
+      We always like to hear from passionate like minded individuals who would
+      love to join our team or even hang out for a day or two. If this is you
+      please fill out the form below and attach a resume.
+    </p>
+    <button class="btn">Apply Now</button>
+  </div>
+</section>

@@ -1,15 +1,15 @@
 <section id="home" class="navbar-section">
   <div class="list-wrapper">
-    <ul class="text-centered">
+    <ul class="text-centered" [class.menu-open]="menuOpen">
       <li routerLink="">home</li>
-      <li routerLink="/menu">menu</li>
       <li routerLink="/gallery">gallery</li>
-      <h1>
+      <li routerLink="/menu">menu</li>
+      <h1 *ngIf="menuOpen">
         Kitch'N <br />
         Boyz
       </h1>
       <li (click)="toEvents()" routerLink="">events</li>
-      <li>staff</li>
+      <li routerLink="/staff">staff</li>
       <li (click)="toContact()" routerLink="">contact</li>
     </ul>
   </div>

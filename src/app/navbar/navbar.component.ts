@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  menuOpen = true;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
 
   toContact() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });

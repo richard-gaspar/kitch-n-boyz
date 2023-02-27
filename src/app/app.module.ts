@@ -12,6 +12,14 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { MenuComponent } from './menu/menu.component';
+import { StaffComponent } from './staff/staff.component';
+import { NgIconsModule } from '@ng-icons/core';
+import {
+  ionLogoFacebook,
+  ionLogoTwitter,
+  ionLogoInstagram,
+  ionLogoTiktok,
+} from '@ng-icons/ionicons';
 
 @NgModule({
   declarations: [
@@ -25,8 +33,18 @@ import { MenuComponent } from './menu/menu.component';
     HomeComponent,
     GalleryComponent,
     MenuComponent,
+    StaffComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgIconsModule.withIcons({
+      ionLogoFacebook,
+      ionLogoTwitter,
+      ionLogoInstagram,
+      ionLogoTiktok,
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

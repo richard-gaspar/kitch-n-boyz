@@ -1,0 +1,161 @@
+.staff-section {
+  @include default-section;
+  max-width: $default-max-width;
+  padding: 5rem 0;
+  column-gap: 5rem;
+  row-gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .employee {
+    position: relative;
+    width: 21rem;
+    height: 28rem;
+
+    &-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: translate(-50%, -50%);
+      // border-radius: 1px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: $z-index-2;
+        background-color: #000;
+        transition: 0.5s;
+
+        & img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:hover {
+        img {
+          opacity: 0.4;
+          transition: 0.5s;
+        }
+
+        .employee-card-image {
+          transform: translateY(-8rem);
+          transition: all 0.9s;
+        }
+
+        .employee-social-icons li a {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    &-social-icons {
+      display: flex;
+      position: absolute;
+      gap: 1rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: $z-index-3;
+
+      li {
+        list-style: none;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 3rem;
+          height: 3rem;
+          background: $color-primary;
+          font-size: 1.2rem;
+          color: $color-blackish;
+          transition: 0.4s;
+          opacity: 0;
+
+          &:hover {
+            background: #000;
+            transition: 0.4s;
+            transition-delay: 0;
+            .icon {
+              color: $color-primary;
+            }
+          }
+
+          .icon {
+            font-size: 2rem;
+          }
+        }
+      }
+      &-first {
+        transform: translateY(20rem);
+      }
+      &-second {
+        transform: translateY(40rem);
+      }
+      &-third {
+        transform: translateY(60rem);
+      }
+      &-fourth {
+        transform: translateY(80rem);
+      }
+    }
+
+    &-details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $color-primary-dark;
+      width: 100%;
+      height: 10rem;
+      z-index: 1;
+      padding: 1rem;
+
+      h3 {
+        margin: 2rem 0;
+        padding: 0;
+        text-align: center;
+        color: $color-blackish-light;
+
+        .employee-details-job-title {
+          font-size: 1.4rem;
+          line-height: 2.5rem;
+          color: $color-blackish-light;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .careers {
+    @include default-section;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    margin: 8rem 0 8rem 0;
+
+    & h2 {
+      font-size: 5rem;
+    }
+
+    & p {
+      text-align: center;
+    }
+
+    & button {
+      width: 20rem;
+    }
+  }
+}
