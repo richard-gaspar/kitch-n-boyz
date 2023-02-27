@@ -13,12 +13,15 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { MenuComponent } from './menu/menu.component';
 import { StaffComponent } from './staff/staff.component';
+
 import { NgIconsModule } from '@ng-icons/core';
 import {
   ionLogoFacebook,
   ionLogoTwitter,
   ionLogoInstagram,
   ionLogoTiktok,
+  ionMenuOutline,
+  ionCloseOutline,
 } from '@ng-icons/ionicons';
 
 @NgModule({
@@ -43,6 +46,8 @@ import {
       ionLogoTwitter,
       ionLogoInstagram,
       ionLogoTiktok,
+      ionMenuOutline,
+      ionCloseOutline,
     }),
   ],
   providers: [],

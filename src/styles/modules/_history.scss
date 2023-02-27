@@ -60,6 +60,9 @@
         height: auto;
         opacity: 0;
       }
+      @include respond(tablet) {
+        display: none;
+      }
     }
 
     @include respond(smaller-monitor) {

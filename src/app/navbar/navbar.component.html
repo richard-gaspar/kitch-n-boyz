@@ -1,16 +1,24 @@
 <section id="home" class="navbar-section">
-  <div class="list-wrapper">
-    <ul class="text-centered" [class.menu-open]="menuOpen">
-      <li routerLink="">home</li>
-      <li routerLink="/gallery">gallery</li>
-      <li routerLink="/menu">menu</li>
-      <h1 *ngIf="menuOpen">
+  <div
+    [class.list-wrapper]="!hamburgerMenuOpen"
+    [class.list-wrapper-mobile]="hamburgerMenuOpen"
+  >
+    <ul>
+      <li routerLink="" (click)="disableMenu()">home</li>
+      <li routerLink="/gallery" (click)="disableMenu()">gallery</li>
+      <li routerLink="/menu" (click)="disableMenu()">menu</li>
+      <h1 *ngIf="!hamburgerMenuOpen">
         Kitch'N <br />
         Boyz
       </h1>
-      <li (click)="toEvents()" routerLink="">events</li>
-      <li routerLink="/staff">staff</li>
-      <li (click)="toContact()" routerLink="">contact</li>
+      <li routerLink="" (click)="toEvents()" (click)="disableMenu()">events</li>
+      <li routerLink="/staff" (click)="disableMenu()">staff</li>
+      <li routerLink="" (click)="toContact()" (click)="disableMenu()">
+        contact
+      </li>
     </ul>
   </div>
+  <button class="hamburger-menu-button" (click)="toggleMenu()">
+    <ng-icon name="ionMenuOutline" class="hamburger-menu-button-icon"></ng-icon>
+  </button>
 </section>

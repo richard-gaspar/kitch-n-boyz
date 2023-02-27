@@ -10,6 +10,39 @@
   padding: 1rem;
 }
 
+@mixin gradient-text {
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@mixin golden-underline-hover-effect {
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: solid 0.2rem $color-primary;
+    transform: scaleX(0);
+    transition: transform 350ms ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+
+  &.fromRight:after {
+    transform-origin: 100% 50%;
+  }
+
+  &.fromLeft:after {
+    transform-origin: 0% 50%;
+  }
+}
+
 // ************** MEDIA QUERY ************** //
 /*
 0-600
@@ -48,6 +81,13 @@ $breakpoints :
   @if $breakpoint == smaller-monitor {
     // 1200px
     @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == navbar {
+    // 1200px
+    @media (min-width: 56.25em) {
       @content;
     }
   }

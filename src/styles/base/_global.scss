@@ -14,18 +14,14 @@ html {
   }
 
   @include respond(tablet) {
-    font-size: 40%; //1 rem = 8 px , 8/16
+    font-size: 40%;
   }
 
   @include respond(phone) {
-    font-size: 30%; //1 rem = 8 px , 8/16
+    font-size: 35%;
   }
 }
 
 body {
   box-sizing: border-box;
-}
-
-.main-wrapper {
-  animation: fadeUp 1s ease-in-out;
 }
