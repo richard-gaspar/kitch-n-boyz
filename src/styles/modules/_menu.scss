@@ -21,7 +21,7 @@
   }
 
   .menu-wrapper {
-    width: $default-max-width;
+    max-width: $default-max-width;
     display: flex;
     flex-direction: column;
     gap: 10rem;
@@ -44,6 +44,15 @@
       &-course-ingredients {
         color: $color-primary-dark;
       }
+
+      @include respond(tablet) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    @include respond(tablet) {
+      text-align: center;
     }
   }
 }

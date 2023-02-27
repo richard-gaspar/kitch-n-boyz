@@ -27,7 +27,7 @@
     }
 
     @include respond(tablet) {
-      padding: 15rem 15rem 20rem 15rem;
+      padding: 15rem 5rem 10rem 5rem;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(7, 1fr);
     }

@@ -24,10 +24,11 @@
       max-width: 140rem;
       gap: 10rem;
 
-      @include respond(smaller-monitor) {
+      @include respond(tablet) {
         flex-wrap: wrap;
         justify-content: center;
         gap: 5rem;
+        font-size: 3rem;
       }
 
       img {
@@ -41,7 +42,7 @@
         text-align: left;
         opacity: 0;
 
-        @include respond(smaller-monitor) {
+        @include respond(tablet) {
           font-size: 90%;
           text-align: center;
           max-width: 70%;
@@ -51,8 +52,9 @@
     }
 
     .history-video-container {
-      max-width: 100vw;
-      margin: 20rem -20rem 0 -20rem;
+      width: 100vw;
+      position: relative;
+      left: calc(-50vw + 50%);
 
       .history-video {
         object-fit: contain;
