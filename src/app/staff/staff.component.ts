@@ -10,42 +10,42 @@ export class StaffComponent {
     {
       name: 'Mikael Anderson',
       jobTitle: 'Executive Chef',
-      imageUrl: '/assets/images/staff/mikael.jpg',
+      imageUrl: 'assets/images/staff/mikael.jpg',
     },
     {
       name: 'Vilhelm Eirik',
       jobTitle: 'Sous Chef',
-      imageUrl: '/assets/images/staff/vilhelm.jpg',
+      imageUrl: 'assets/images/staff/vilhelm.jpg',
     },
     {
       name: 'Karl Hallvard',
       jobTitle: 'Director of Operations',
-      imageUrl: '/assets/images/staff/karl.jpg',
+      imageUrl: 'assets/images/staff/karl.jpg',
     },
     {
       name: 'Milly Tonje',
       jobTitle: 'Director of Sales',
-      imageUrl: '/assets/images/staff/milly.jpg',
+      imageUrl: 'assets/images/staff/milly.jpg',
     },
     {
       name: 'Dorthea Karin',
       jobTitle: 'Events Director',
-      imageUrl: '/assets/images/staff/dorthea.jpg',
+      imageUrl: 'assets/images/staff/dorthea.jpg',
     },
     {
       name: 'Lucas Filip',
       jobTitle: 'Lead Bartender',
-      imageUrl: '/assets/images/staff/lucas.jpg',
+      imageUrl: 'assets/images/staff/lucas.jpg',
     },
     {
       name: 'Sølvi Nanna',
       jobTitle: 'Director of Hospitality',
-      imageUrl: '/assets/images/staff/solvi.jpg',
+      imageUrl: 'assets/images/staff/solvi.jpg',
     },
     {
       name: 'Hallstein Olve',
       jobTitle: 'Sommelier',
-      imageUrl: '/assets/images/staff/hallstein.jpg',
+      imageUrl: 'assets/images/staff/hallstein.jpg',
     },
   ];
 }
