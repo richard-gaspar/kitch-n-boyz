@@ -19,7 +19,6 @@ export class AnimationService {
     this.observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry.target.nodeName);
           if (entry.target.nodeName === 'P') {
             entry.target.classList.add('in-view-from-top');
           }
