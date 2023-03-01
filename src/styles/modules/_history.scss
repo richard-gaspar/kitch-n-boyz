@@ -33,6 +33,10 @@
 
       img {
         opacity: 0;
+
+        @include respond(tablet) {
+          max-width: 80%;
+        }
       }
 
       .history-text {
@@ -45,7 +49,7 @@
         @include respond(tablet) {
           font-size: 90%;
           text-align: center;
-          max-width: 70%;
+          max-width: 90%;
           order: 1;
         }
       }
