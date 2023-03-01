@@ -10,7 +10,7 @@ export class StaffComponent {
     {
       name: 'Mikael Anderson',
       jobTitle: 'Executive Chef',
-      imageUrl: './assets/images/staff/mikael.jpg',
+      imageUrl: 'assets/images/staff/mikael.jpg',
     },
     {
       name: 'Vilhelm Eirik',
