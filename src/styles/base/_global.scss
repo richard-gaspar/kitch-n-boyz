@@ -14,11 +14,11 @@ html {
   }
 
   @include respond(tablet) {
-    font-size: 40%;
+    font-size: 45%;
   }
 
   @include respond(phone) {
-    font-size: 35%;
+    font-size: 40%;
   }
 }
 

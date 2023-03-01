@@ -56,7 +56,8 @@ $breakpoints :
 -phone
 -tablet
 -tablet landscape
--big desktop
+-small-monitor
+-navbar
 */
 
 @mixin respond($breakpoint) {

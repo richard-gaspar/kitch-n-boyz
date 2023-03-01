@@ -40,5 +40,12 @@
       font-size: 2rem;
       font-style: italic;
     }
+
+    @include respond(tablet) {
+      font-size: 2rem;
+    }
+  }
+  @include respond(tablet) {
+    padding: 10rem 5rem;
   }
 }

@@ -34,11 +34,15 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 5rem;
-      row-gap: 3rem;
+      row-gap: 4rem;
 
       &-course-name {
         color: $color-primary-light;
         font-size: 1.8rem;
+
+        @include respond(tablet) {
+          font-size: 3rem;
+        }
       }
 
       &-course-ingredients {
@@ -53,6 +57,7 @@
     }
     @include respond(tablet) {
       text-align: center;
+      font-size: 3rem;
     }
   }
 }

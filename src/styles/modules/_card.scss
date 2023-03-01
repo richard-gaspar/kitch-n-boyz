@@ -27,11 +27,19 @@
 
         & h3 {
           margin-top: 5rem;
+
+          @include respond(tablet) {
+            font-size: 4rem;
+          }
         }
 
         & p {
           margin-top: 10rem;
           padding: 0 2rem;
+
+          @include respond(tablet) {
+            font-size: 2rem;
+          }
         }
       }
 
